@@ -1,5 +1,5 @@
 import '../styles/globals.css';
-import '../styles/menus.css';
+import '../styles/fako.css';
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
