@@ -2,30 +2,35 @@
 
 import Link from 'next/link';
 import {usePathname} from 'next/navigation';
-import {site} from '@/lib/site';
-import {toWaNumber} from '@/lib/phone';
+import {useMemo} from 'react';
+
+function getLocaleFromPathname(pathname: string): 'fr' | 'en' {
+  const seg = pathname.split('/').filter(Boolean)[0];
+  return seg === 'en' ? 'en' : 'fr';
+}
 
 export default function Header() {
-  const pathname = usePathname();
-  const waHref = `https://wa.me/${toWaNumber(site.telephone)}`;
+  const pathname = usePathname() || '/fr';
+  const locale = useMemo(() => getLocaleFromPathname(pathname), [pathname]);
 
-  // basePath = "/fr" ou "/en"
-  const seg = pathname.split('/').filter(Boolean);
-  const locale = seg[0] === 'en' ? 'en' : 'fr';
-  const base = `/${locale}`;
+  const base = `/${locale}` as const;
 
   return (
     <header className="header" role="banner">
-      <div className="container" style={{display:'flex', justifyContent:'space-between', alignItems:'center', gap:'.75rem'}}>
+      <a className="skip-link" href="#main">Aller au contenu</a>
+
+      <div className="container" style={{display:'flex',justifyContent:'space-between',alignItems:'center',gap:'.75rem'}}>
         <Link href={base} aria-label="Accueil">
-          {site.name}
+          FAKO Surf School
         </Link>
 
-        <nav aria-label="Navigation principale" style={{display:'flex', gap:'1rem', alignItems:'center'}}>
-          <a href="#cours">Cours</a>
-          <a href="#ecole">École</a>
-          <a href="#location">Localisation</a>
-          <a href={waHref} target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <nav aria-label="Navigation principale" className="site-nav-desktop">
+          <ul>
+            <li><a href={`${base}/#cours`}>Cours</a></li>
+            <li><a href={`${base}/#tarifs`}>Tarifs</a></li>
+            <li><a href={`${base}/#spot`}>Spot</a></li>
+            <li><Link href={`${base}/contact`}>Contact</Link></li>
+          </ul>
         </nav>
       </div>
     </header>

@@ -1,13 +1,27 @@
 import {NextIntlClientProvider} from 'next-intl';
-import {getMessages} from 'next-intl/server';
+import {getMessages, getTranslations} from 'next-intl/server';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
-export default async function LocaleLayout({
-  children
-}: {
-  children: React.ReactNode;
-}) {
+export async function generateMetadata({params}: {params: Promise<{locale: string}>}) {
+  const {locale} = await params;
+  const t = await getTranslations({locale});
+  const title = t('seo.title');
+  const description = t('seo.description');
+
+  return {
+    title,
+    description,
+    alternates: {
+      languages: {
+        fr: '/fr',
+        en: '/en'
+      }
+    }
+  };
+}
+
+export default async function LocaleLayout({children}: {children: React.ReactNode}) {
   const messages = await getMessages();
 
   return (

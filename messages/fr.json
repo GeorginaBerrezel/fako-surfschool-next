@@ -1,3 +1,70 @@
 {
-  "test": "Bonjour – version française"
+  "seo": {
+    "title": "FAKO SURF SCHOOL — École de surf mobile",
+    "description": "Cours de surf à Vensac (Montalivet) : petits groupes, matériel inclus, coaching adapté à votre niveau."
+  },
+  "hero": {
+    "h1": "FAKO SURF SCHOOL",
+    "subtitle": "La première école de surf mobile",
+    "cta_whatsapp": "Contacter via WhatsApp"
+  },
+  "school": {
+    "title": "École",
+    "p1": "Aussi, fort de son savoir-faire, de ses connaissances du milieu et dans un souci de qualité, Etienne vous conseillera sur le choix des horaires des cours en fonction des vos disponibilités, de votre niveau de pratique ainsi que vos attentes afin de vous mettre dans les meilleures conditions possibles de réussite.",
+    "bulletsTitle": "À l’issue d’un stage ou même d’une séance, des notions vous seront apportées concernant :",
+    "bullets": [
+      "Les phénomènes de marées et les courants de « Baïnes »",
+      "L’attitude à adopter pour mieux appréhender l’océan et ses dangers",
+      "Choisir le bon « spot » ou banc de sable et évaluer les vagues en fonction de son niveau de pratique",
+      "Apprendre à respecter les règles de conduite et de priorité à l’eau pour les plus confirmés",
+      "Apprendre à choisir son matériel",
+      "Comment mieux gérer son effort physique avant et après une session de surf"
+    ],
+    "p2": "Chaque séance de surf est précédée d’un échauffement effectué sous forme d’une préparation physique ou d’une séance de « body surf ».",
+    "p3": "Si vous possédez déjà des bases techniques ou une expérience de pratique, laissez vous tenter par une remise à niveau, le temps d’une séance pour faire le bilan de vos compétences.",
+    "p4": "De plus de part sa proximité à l’océan, l’accès aux vagues avec les planches de surf n’est pas contraignant et cela vous assurera un temps de pratique optimisé."
+  },
+  "classes": {
+    "title": "Les cours",
+    "intro": "Les séances de surf se composent de 5 personnes max pour les particuliers mais, toujours dans une démarche de qualité, ces groupes peuvent être limités à 2 ou 3 personnes parfois ! En ce qui concerne les familles ou groupes, ce nombre peut être dépassé dans une limite max de 8 personnes.",
+    "goPro": "EXCLUSIF ! Etienne vous propose également d’être filmé avec une camera « GO PRO » si vous le souhaitez en fonction des conditions météorologiques (vagues et vent) et cela gratuitement !",
+    "levels": [
+      {
+        "name": "Débutant",
+        "desc": "Vous avez toujours voulu tenter l’expérience sans avoir osé franchir le pas ? Qu’importe ! Etienne saura vous mettre en confiance et effacera vos appréhensions en vous mettant dans les meilleures conditions de pratique."
+      },
+      {
+        "name": "Intermédiaire",
+        "desc": "Vous vous sentez en confiance dans les vagues de bord et vous désirez ramer plus au large dans les petites conditions (vagues – 1 m) pour prendre vos premières vagues lisses."
+      },
+      {
+        "name": "Confirmé",
+        "desc": "Vous vous levez sur des vagues lisses et vous voulez apprendre à tourner pour suivre le déferlement de la vague ou bien aller au large dans les vagues de + 1m en utilisant les « Baïnes » ? Dans ce cas, Etienne vous amènera plus au large par petit groupe et il vous donnera des repères pour toujours être au bon endroit au bon moment en gérant votre effort physique."
+      }
+    ]
+  },
+  "spot": {
+    "title": "Lieu",
+    "text": "Le surf se pratique sur la plage de VENSAC. Celle-ci se situe à 2km au nord de MONTALIVET les BAINS, commune de VENDAYS, en Gironde. La plage de VENSAC n’est qu’à une vingtaine de kilomètres au sud de SOULAC S/MER par la route D102 et à 1H30 à l’ouest de BORDEAUX. Elle est facile d’accès en voiture, à pied ou bien à vélo par les nombreuses pistes cyclables venant de MONTALIVET, VENSAC et GRAYAN et L’HÔPITAL."
+  },
+  "pricing": {
+    "title": "Tarifs",
+    "rows": [
+      {"label": "1× 1h30 — Adultes", "price": "35 EUR"},
+      {"label": "1× 1h30 — 11/14 ans", "price": "33 EUR"},
+      {"label": "1× 1h30 — 7/10 ans", "price": "30 EUR"},
+      {"label": "3× 1h30 — Adultes", "price": "95 EUR"},
+      {"label": "3× 1h30 — 11/14 ans", "price": "85 EUR"},
+      {"label": "3× 1h30 — 7/10 ans", "price": "75 EUR"},
+      {"label": "5× 1h30 — Adultes", "price": "145 EUR"},
+      {"label": "5× 1h30 — 11/14 ans", "price": "135 EUR"},
+      {"label": "5× 1h30 — 7/10 ans", "price": "120 EUR"},
+      {"label": "10× 1h30 — Adultes", "price": "250 EUR"},
+      {"label": "10× 1h30 — 11/14 ans", "price": "230 EUR"},
+      {"label": "10× 1h30 — 7/10 ans", "price": "200 EUR"},
+      {"label": "Cours privé — 1× 1h30", "price": "80 EUR / pers"}
+    ],
+    "note1": "Les cours incluent l’encadrement, l’assurance, le matériel, avec des combinaisons intégrales et des planches en mousse. Possibilité d‘apporter son matériel personnel.",
+    "note2": "Les cours peuvent être annulés ou reportés en raison de vent violent, forte houle, orage, ou autres facteurs mettant en danger la sécurité de la pratique de l’activité."
+  }
 }
