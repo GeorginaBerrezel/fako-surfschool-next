@@ -1,0 +1,19 @@
+# Next.js
+.next/
+out/
+*.log
+
+# Node
+node_modules/
+
+# Env vars
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# OS / Editor
+.DS_Store
+.vscode/
+.idea/

@@ -1,0 +1,86 @@
+:root {
+  --bg: #0a0a0a;
+  --fg: #ffffff;
+  --muted: #c7c7c7;
+  --brand: #cda867; /* gold-like */
+  --accent: #245c2a; /* green */
+  --focus: #1a73e8;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #ffffff;
+    --fg: #111111;
+    --muted: #333333;
+  }
+}
+
+* { box-sizing: border-box; }
+html:focus-within { scroll-behavior: smooth; }
+html, body { padding: 0; margin: 0; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.6;
+}
+
+a { color: var(--brand); text-decoration-thickness: .1em; }
+a:focus, button:focus, input:focus, textarea:focus, select:focus {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.container { width: 100%; max-width: 72rem; margin: 0 auto; padding: 1rem; }
+
+.header {
+  position: sticky; top: 0; backdrop-filter: blur(6px);
+  background: color-mix(in oklab, var(--bg) 85%, transparent);
+  border-bottom: 1px solid color-mix(in oklab, var(--fg) 15%, transparent);
+}
+
+nav ul { list-style: none; display: flex; gap: .5rem; padding: 0; margin: 0; flex-wrap: wrap; }
+nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: .25em; }
+
+.skip-link {
+  position: absolute; top: -40px; left: 0;
+  background: var(--focus); color: #fff; padding: .5rem 1rem; z-index: 1000;
+}
+.skip-link:focus { top: 0; }
+
+.hero {
+  display: grid; gap: 1rem; align-items: center;
+  grid-template-columns: 1fr;
+  padding-block: clamp(2rem, 6vw, 5rem);
+}
+@media (min-width: 900px) {
+  .hero { grid-template-columns: 1.2fr 1fr; }
+}
+
+.card {
+  border: 1px solid color-mix(in oklab, var(--fg) 15%, transparent);
+  border-radius: .75rem; padding: 1rem;
+  background: color-mix(in oklab, var(--bg) 95%, transparent);
+}
+
+.grid { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+@media (min-width: 700px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1100px) {
+  .grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+footer {
+  border-top: 1px solid color-mix(in oklab, var(--fg) 15%, transparent);
+  margin-top: 3rem; padding-block: 2rem;
+}
+small, time { color: var(--muted); }
+.btn {
+  display: inline-block; padding: .75rem 1rem;
+  background: var(--brand); color: #111; font-weight: 700; border-radius: .5rem;
+}
+.btn:hover { filter: saturate(1.2); }
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}

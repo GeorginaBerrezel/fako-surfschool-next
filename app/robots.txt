@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://latelierdesgourmets.ch/sitemap.xml

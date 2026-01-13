@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Atelier des Gourmets — Démo statique</title>
+  <meta name="description" content="Restaurant à Ayent. Cuisine de saison, pizzas et plats du jour.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+  <header class="header" role="banner">
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:.5rem">
+      <strong style="font-size:1.2rem">L’atelier des Gourmets</strong>
+      <nav aria-label="Navigation principale">
+        <ul>
+          <li><a href="#" aria-current="page">Accueil</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">L’histoire</a></li>
+          <li><a href="#">Avis client</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="hero">
+      <div>
+        <h1>Atelier des Gourmets</h1>
+        <p>Restaurant à Ayent. Cuisine de saison, pizzas et plats du jour.</p>
+        <p><a class="btn" href="#menu">Voir le menu</a></p>
+      </div>
+      <div class="card" style="height:300px;display:grid;place-items:center" aria-label="Image illustrative">
+        <span>Image</span>
+      </div>
+    </section>
+
+    <section id="menu" class="grid">
+      <h2 class="visually-hidden">Menu</h2>
+      <article class="card"><h3>Entrées</h3><p>Je ne sais pas.</p></article>
+      <article class="card"><h3>Plats</h3><p>Je ne sais pas.</p></article>
+      <article class="card"><h3>Pizzas</h3><p>Je ne sais pas.</p></article>
+    </section>
+
+    <section class="card" aria-labelledby="adresse">
+      <h2 id="adresse">Adresse</h2>
+      <p><strong>Route de Botyre 30 – 1966 Ayent</strong></p>
+      <p>Téléphone : <a href="tel:+41273981496">+41 27 398 14 96</a></p>
+      <div class="card" style="padding:0" aria-label="Carte Google Maps intégrée">
+        <iframe title="Itinéraire" width="100%" height="300" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Route%20de%20Botyre%2030%2C%201966%20Ayent&output=embed"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <p><small>&copy; <span id="y"></span> L’atelier des Gourmets</small></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

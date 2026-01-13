@@ -1,0 +1,59 @@
+/* Wrap */
+.menu-wrap { padding-block: 2rem 4rem; }
+
+/* Hero */
+.menu-hero { text-align: center; margin-bottom: 1.5rem; }
+.menu-hero h1 {
+  text-transform: uppercase; letter-spacing: .06em; font-weight: 800;
+}
+
+/* Tabs */
+.tabs { display: flex; gap: .75rem; overflow-x: auto; padding: .5rem 0 1rem; border-bottom: 1px solid #e5e5e5; }
+.tab {
+  position: relative; background: transparent; border: 0; padding: .75rem 1rem;
+  text-transform: uppercase; letter-spacing: .05em; color: #666; font-weight: 700; cursor: pointer;
+}
+.tab.active, .tab:hover { color: #30383B; }
+.tab .underline {
+  position: absolute; left: 1rem; right: 1rem; bottom: .35rem;
+  height: 2px; background: #30383B; border-radius: 2px;
+}
+
+/* Section */
+.menu-section { padding-block: 2rem; }
+.menu-section h2 {
+  font-size: 1.35rem; text-transform: uppercase; color: #30383B; margin: 0 0 1rem;
+}
+
+/* Grid cartes */
+.grid-cards {
+  display: grid; gap: 1rem;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 800px) {
+  .grid-cards { grid-template-columns: 1fr 1fr; }
+}
+
+/* Carte plat */
+.menu-card {
+  display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 1rem;
+  background: #fff; border: 1px solid #eee; border-radius: 14px; padding: .75rem .9rem;
+}
+@media (prefers-color-scheme: dark) {
+  .menu-card { background: #111; border-color: #2a2a2a; }
+}
+.menu-card .thumb img { border-radius: 50%; width: 64px; height: 64px; object-fit: cover; }
+.menu-card .meta { min-width: 0; }
+.menu-card .title { margin: 0; font-size: 1rem; line-height: 1.25; }
+.menu-card .desc { margin: .2rem 0 0; color: #666; font-size: .9rem; }
+.menu-card .price { font-variant-numeric: tabular-nums; font-weight: 700; white-space: nowrap; }
+
+/* Séparateurs discrets (optionnel) */
+/* .menu-card { box-shadow: 0 1px 0 rgba(0,0,0,.05) inset; } */
+
+/* Impression */
+@media print {
+  header, .tabs { display: none !important; }
+  .grid-cards { grid-template-columns: 1fr 1fr; }
+  .menu-card { break-inside: avoid; }
+}

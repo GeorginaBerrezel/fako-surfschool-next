@@ -1,0 +1,142 @@
+{
+  "categories": [
+    {
+      "id": "entrees",
+      "label": "Entrées",
+      "items": [
+        {
+          "name": "Salade Mêlée",
+          "desc": "",
+          "price": "CHF 9.–",
+          "img": "/images/menu/salade-melee.jpeg"
+        },
+        {
+          "name": "Tartare de Saumon & son Beurre Maison",
+          "desc": "",
+          "price": "CHF 19.–",
+          "img": "/images/menu/tartare-de-saumon-son-beurre-maison.jpeg"
+        },
+        {
+          "name": "Carpaccio de Poulpe Mariné",
+          "desc": "",
+          "price": "CHF 19.–",
+          "img": "/images/menu/carpaccio-de-poulpe-marine.jpeg"
+        },
+        {
+          "name": "Os à Moelle & Marinade à l’Ail des Ours",
+          "desc": "18 min de cuisson",
+          "price": "CHF 15.–",
+          "img": "/images/menu/os-a-moelle-marinade-a-l-ail-des-ours.jpeg"
+        },
+        {
+          "name": "Foie Gras Maison, Chutney de Fruits Rouges",
+          "desc": "",
+          "price": "CHF 21.–",
+          "img": "/images/menu/foie-gras-maison-chutney-de-fruits-rouges.jpeg"
+        },
+        {
+          "name": "Huîtres (selon arrivage)",
+          "desc": "Fine de Claire N°3 · 3.–/pc | Spéciale Gillardeau N°3 · 6.–/pc",
+          "price": "",
+          "img": "/images/menu/huitres-selon-arrivage.jpeg"
+        }
+      ]
+    },
+    {
+      "id": "plats",
+      "label": "Plats",
+      "items": [
+        {
+          "name": "Rognons de Veau Façon Grand-Mère",
+          "desc": "Réduction au Cognac",
+          "price": "CHF 32.–",
+          "img": "/images/menu/rognons-de-veau-facon-grand-mere.jpeg"
+        },
+        {
+          "name": "Risotto aux Morilles & Marsala, Magret Fumé Maison",
+          "desc": "",
+          "price": "CHF 39.–",
+          "img": "/images/menu/risotto-aux-morilles-marsala-magret-fume-maison.jpeg"
+        },
+        {
+          "name": "Burger de l’Atelier, Frites & Salade",
+          "desc": "Pain maison, bœuf & lard, raclette d’Ayent, oignons caramélisés, sauce maison",
+          "price": "CHF 26.–",
+          "img": "/images/menu/burger-de-l-atelier-frites-salade.jpeg"
+        }
+      ]
+    },
+    {
+      "id": "la-mer",
+      "label": "La Mer",
+      "items": [
+        {
+          "name": "Soupe de Poisson de l’Île de Ré & sa Garniture",
+          "desc": "Fromage râpé, croûtons & rouille",
+          "price": "CHF 25.–",
+          "img": "/images/menu/soupe-de-poisson-de-l-ile-de-re-sa-garniture.jpeg"
+        },
+        {
+          "name": "Filet de Daurade Sébaste Poêlé, Sauce Vierge",
+          "desc": "",
+          "price": "CHF 38.–",
+          "img": "/images/menu/filet-de-daurade-sebaste-poele-sauce-vierge.jpeg"
+        },
+        {
+          "name": "Rôti de Merlu Lardé & sa Crème d’Ail",
+          "desc": "",
+          "price": "CHF 36.–",
+          "img": "/images/menu/roti-de-merlu-larde-sa-creme-d-ail.jpeg"
+        },
+        {
+          "name": "Risotto de la Mer, Crème de Roquette & Pesto",
+          "desc": "Encornets, langoustines & gambas",
+          "price": "CHF 37.–",
+          "img": "/images/menu/risotto-de-la-mer-creme-de-roquette-pesto.jpeg"
+        },
+        {
+          "name": "Poêlée d’Encornets & Poulpe au Chorizo",
+          "desc": "",
+          "price": "CHF 33.–",
+          "img": "/images/menu/poelee-d-encornets-poulpe-au-chorizo.jpeg"
+        },
+        {
+          "name": "Kraken Burger, Frites et Salade",
+          "desc": "Pain à l’encre de seiche, poulpe, crème de piquillos, chorizo & roquette",
+          "price": "",
+          "img": "/images/menu/kraken-burger-frites-et-salade.jpeg"
+        }
+      ]
+    },
+    {
+      "id": "pizzas",
+      "label": "Pizzas",
+      "items": [
+        {
+          "name": "Junior",
+          "desc": "Tomate, jambon, mozzarella",
+          "price": "CHF 19.–",
+          "img": "/images/menu/junior.jpeg"
+        },
+        {
+          "name": "Fungo",
+          "desc": "Tomate, champignons frais, mozzarella",
+          "price": "CHF 18.–",
+          "img": "/images/menu/fungo.jpeg"
+        },
+        {
+          "name": "Reine",
+          "desc": "Tomate, jambon, champignons frais, mozzarella",
+          "price": "CHF 21.–",
+          "img": "/images/menu/reine.jpeg"
+        },
+        {
+          "name": "Diabolo",
+          "desc": "Tomate, chorizo, mozzarella",
+          "price": "CHF 20.–",
+          "img": "/images/menu/diabolo.jpeg"
+        }
+      ]
+    }
+  ]
+}
