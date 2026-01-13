@@ -13,22 +13,26 @@ export async function generateMetadata({params}: {params: Promise<{locale: strin
     title,
     description,
     alternates: {
-      languages: {
-        fr: '/fr',
-        en: '/en'
-      }
+      languages: { fr: '/fr', en: '/en' }
     }
   };
 }
 
-export default async function LocaleLayout({children}: {children: React.ReactNode}) {
+export default async function LocaleLayout({
+  children,
+  params
+}: {
+  children: React.ReactNode;
+  params: Promise<{locale: 'fr' | 'en'}>;
+}) {
+  const {locale} = await params;
   const messages = await getMessages();
 
   return (
     <NextIntlClientProvider messages={messages}>
-      <Header />
+      <Header locale={locale} />
       <main id="main">{children}</main>
-      <Footer />
+      <Footer locale={locale} />
     </NextIntlClientProvider>
   );
 }

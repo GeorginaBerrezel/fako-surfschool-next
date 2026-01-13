@@ -1,35 +1,27 @@
 'use client';
 
 import Link from 'next/link';
-import {usePathname} from 'next/navigation';
-import {useMemo} from 'react';
+import {useTranslations} from 'next-intl';
 
-function getLocaleFromPathname(pathname: string): 'fr' | 'en' {
-  const seg = pathname.split('/').filter(Boolean)[0];
-  return seg === 'en' ? 'en' : 'fr';
-}
-
-export default function Header() {
-  const pathname = usePathname() || '/fr';
-  const locale = useMemo(() => getLocaleFromPathname(pathname), [pathname]);
-
+export default function Header({locale}: {locale: 'fr' | 'en'}) {
+  const t = useTranslations('nav');
   const base = `/${locale}` as const;
 
   return (
     <header className="header" role="banner">
-      <a className="skip-link" href="#main">Aller au contenu</a>
+      <a className="skip-link" href="#main">{t('skip')}</a>
 
       <div className="container" style={{display:'flex',justifyContent:'space-between',alignItems:'center',gap:'.75rem'}}>
-        <Link href={base} aria-label="Accueil">
-          FAKO Surf School
+        <Link href={base} aria-label={t('homeAria')}>
+          {t('brand')}
         </Link>
 
-        <nav aria-label="Navigation principale" className="site-nav-desktop">
+        <nav aria-label={t('aria')} className="site-nav-desktop">
           <ul>
-            <li><a href={`${base}/#cours`}>Cours</a></li>
-            <li><a href={`${base}/#tarifs`}>Tarifs</a></li>
-            <li><a href={`${base}/#spot`}>Spot</a></li>
-            <li><Link href={`${base}/contact`}>Contact</Link></li>
+            <li><a href={`${base}/#cours`}>{t('courses')}</a></li>
+            <li><a href={`${base}/#tarifs`}>{t('pricing')}</a></li>
+            <li><a href={`${base}/#spot`}>{t('spot')}</a></li>
+            <li><Link href={`${base}/contact`}>{t('contact')}</Link></li>
           </ul>
         </nav>
       </div>

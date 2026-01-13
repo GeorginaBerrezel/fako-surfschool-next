@@ -1,28 +1,29 @@
-import ContactForm from "@/components/ContactForm";
-import { site } from "@/lib/site";
+import {getTranslations} from 'next-intl/server';
+import {site} from '@/lib/site';
 
-export default function Page() {
+export async function generateMetadata({params}: {params: Promise<{locale: string}>}) {
+  const {locale} = await params;
+  const t = await getTranslations({locale, namespace: 'contact'});
+  return { title: t('seoTitle'), description: t('seoDescription') };
+}
+
+export default async function ContactPage({params}: {params: Promise<{locale: 'fr' | 'en'}>}) {
+  const {locale} = await params;
+  const t = await getTranslations({locale, namespace: 'contact'});
+
   return (
-    <section className="contact-page">
-      <div className="contact-intro">
-        <h1>Contact &amp; réservations</h1>
-        <p>
-          Pour une réservation, une privatisation ou une question sur la carte,
-          vous pouvez nous écrire via le formulaire ou nous appeler directement.
-        </p>
-        <ul className="contact-infos">
-          <li>
-            <strong>Téléphone</strong> :{" "}
-            <a href={`tel:${site.telephone}`}>{site.telephone}</a>
-          </li>
-          <li>
-            <strong>Adresse</strong> :{" "}
-            {site.address.streetAddress}, {site.address.postalCode}{" "}
-            {site.address.addressLocality}
-          </li>
-        </ul>
+    <section className="container" style={{paddingTop:'1.25rem', paddingBottom:'2rem'}}>
+      <h1>{t('title')}</h1>
+      <p>{t('intro')}</p>
+
+      <div className="card" style={{padding:'1rem'}}>
+        <p><strong>{t('phone')}:</strong> <a href={`tel:${site.telephone.replace(/\s/g,'')}`}>{site.telephone}</a></p>
+        {site.email ? (
+          <p><strong>{t('email')}:</strong> <a href={`mailto:${site.email}`}>{site.email}</a></p>
+        ) : null}
       </div>
-      <ContactForm />
+
+      <p style={{marginTop:'1rem'}}>{t('formNote')}</p>
     </section>
   );
 }

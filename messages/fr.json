@@ -66,5 +66,39 @@
     ],
     "note1": "Les cours incluent l’encadrement, l’assurance, le matériel, avec des combinaisons intégrales et des planches en mousse. Possibilité d‘apporter son matériel personnel.",
     "note2": "Les cours peuvent être annulés ou reportés en raison de vent violent, forte houle, orage, ou autres facteurs mettant en danger la sécurité de la pratique de l’activité."
+  },
+  "nav": {
+    "aria": "Navigation principale",
+    "skip": "Aller au contenu",
+    "homeAria": "Accueil",
+    "brand": "FAKO Surf School",
+    "courses": "Cours",
+    "pricing": "Tarifs",
+    "spot": "Spot",
+    "contact": "Contact"
+  },
+  "footer": {
+    "addressTitle": "Adresse",
+    "directions": "Itinéraire",
+    "linksTitle": "Liens utiles",
+    "home": "Accueil",
+    "courses": "Cours",
+    "pricing": "Tarifs",
+    "spot": "Spot",
+    "contact": "Contact",
+    "hoursTitle": "Horaires",
+    "closed": "Fermé",
+    "hoursDefaultLabel": "Jour {index}",
+    "hoursNote": "Horaires susceptibles d’évoluer les jours fériés."
+  },
+  "contact": {
+    "seoTitle": "Contact — FAKO Surf School",
+    "seoDescription": "Contactez FAKO Surf School pour réserver un cours de surf.",
+    "title": "Contact",
+    "intro": "Réservation et informations : contactez-nous directement.",
+    "phone": "Téléphone",
+    "email": "Email",
+    "formNote": "Le formulaire sera réintégré ensuite si nécessaire."
   }
+
 }

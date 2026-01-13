@@ -66,5 +66,38 @@
     ],
     "note1": "Lessons for private individuals are conducted in groups of a maximum of five students and include tuition, insurance, equipment, full-length wetsuits and foam surfboards. You can also bring your own equipment if you prefer.",
     "note2": "Lessons may be postponed or cancelled due to very high winds, strong swells, storms or other factors making it dangerous to practice the activity."
+  },
+  "nav": {
+    "aria": "Main navigation",
+    "skip": "Skip to content",
+    "homeAria": "Home",
+    "brand": "FAKO Surf School",
+    "courses": "Classes",
+    "pricing": "Prices",
+    "spot": "Spot",
+    "contact": "Contact"
+  },
+  "footer": {
+    "addressTitle": "Address",
+    "directions": "Directions",
+    "linksTitle": "Links",
+    "home": "Home",
+    "courses": "Classes",
+    "pricing": "Prices",
+    "spot": "Spot",
+    "contact": "Contact",
+    "hoursTitle": "Hours",
+    "closed": "Closed",
+    "hoursDefaultLabel": "Day {index}",
+    "hoursNote": "Hours may change on public holidays."
+  },
+  "contact": {
+    "seoTitle": "Contact — FAKO Surf School",
+    "seoDescription": "Get in touch with FAKO Surf School to book a surf lesson.",
+    "title": "Contact",
+    "intro": "Booking and information: contact us directly.",
+    "phone": "Phone",
+    "email": "Email",
+    "formNote": "The form can be re-added later if needed."
   }
 }
