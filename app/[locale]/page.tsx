@@ -9,15 +9,20 @@ export default async function Page() {
   const bullets = t.raw('school.bullets') as string[];
   const levels = t.raw('classes.levels') as {name: string; desc: string}[];
   const rows = t.raw('pricing.rows') as {label: string; price: string}[];
+  const gallery = t.raw('gallery.items') as {alt: string; caption: string}[];
 
   return (
     <>
       <section className="container" style={{paddingTop: '1.25rem'}}>
         <h1>{t('hero.h1')}</h1>
         <p>{t('hero.subtitle')}</p>
-        <p>
+
+        <p style={{display:'flex', gap:'.75rem', flexWrap:'wrap'}}>
           <a className="btn" href={waHref} target="_blank" rel="noopener noreferrer">
             {t('hero.cta_whatsapp')}
+          </a>
+          <a className="btn btn-outline" href="#tarifs">
+            {t('pricing.title')}
           </a>
         </p>
       </section>
@@ -65,11 +70,41 @@ export default async function Page() {
 
         <p>{t('pricing.note1')}</p>
         <p>{t('pricing.note2')}</p>
+
+        <p>
+          <a className="btn" href={waHref} target="_blank" rel="noopener noreferrer">
+            {t('hero.cta_whatsapp')}
+          </a>
+        </p>
+      </section>
+
+      <section id="photos" className="container" aria-labelledby="gallery-title" style={{paddingTop:'1.5rem'}}>
+        <h2 id="gallery-title">{t('gallery.title')}</h2>
+        <p>{t('gallery.subtitle')}</p>
+
+        <div style={{display:'grid', gap:'1rem', gridTemplateColumns:'repeat(auto-fit, minmax(220px, 1fr))'}}>
+          {gallery.map((it) => (
+            <figure key={it.caption} className="card" style={{padding:'1rem'}}>
+              {/* Remplace ces placeholders par tes vrais <Image src="..."> quand tu es prêt */}
+              <div style={{aspectRatio:'4 / 3', borderRadius:'.5rem', background:'rgba(255,255,255,.08)'}} aria-label={it.alt} />
+              <figcaption style={{marginTop:'.75rem'}}>{it.caption}</figcaption>
+            </figure>
+          ))}
+        </div>
       </section>
 
       <section id="spot" className="container" aria-labelledby="spot-title" style={{paddingTop:'1.5rem', paddingBottom:'2rem'}}>
         <h2 id="spot-title">{t('spot.title')}</h2>
         <p>{t('spot.text')}</p>
+
+        <p style={{display:'flex', gap:'.75rem', flexWrap:'wrap'}}>
+          <a className="btn btn-outline" href={site.surfReportUrl} target="_blank" rel="noopener noreferrer" title={t('spot.surfReportHint')}>
+            {t('spot.surfReportLabel')}
+          </a>
+          <a className="btn btn-outline" href={site.googleMapsLink} target="_blank" rel="noopener noreferrer">
+            Google Maps
+          </a>
+        </p>
 
         <div className="card" style={{padding:0}}>
           <iframe

@@ -45,7 +45,18 @@
   },
   "spot": {
     "title": "Spot",
-    "text": "Surfing takes place at Vensac beach. This is situated 2 km to the north of Montalivet-les-Bains in the commune of Vendays in the Gironde. Vensac beach is a mere 20 kilometres or so south of Soulac-sur-Mer on the D102 road and one and a half hours to the west of Bordeaux. It is easily accessible by car, on foot or by bike on one of the many cycling paths from Montalivet, Vensac and Grayan-et-L’Hôpital."
+    "text": "Surfing takes place at Vensac beach. This is situated 2 km to the north of Montalivet-les-Bains in the commune of Vendays in the Gironde. Vensac beach is a mere 20 kilometres or so south of Soulac-sur-Mer on the D102 road and one and a half hours to the west of Bordeaux. It is easily accessible by car, on foot or by bike on one of the many cycling paths from Montalivet, Vensac and Grayan-et-L’Hôpital.",
+    "surfReportLabel": "Open surf report",
+    "surfReportHint": "Opens the surf report in a new tab."
+  },
+  "gallery": {
+    "title": "Photos",
+    "subtitle": "A few pictures to show the vibe and the lessons.",
+    "items": [
+      { "alt": "Surf lesson — beach briefing", "caption": "Briefing & safety" },
+      { "alt": "Surf lesson — entering the water", "caption": "Getting in" },
+      { "alt": "Surf lesson — surfing session", "caption": "Session" }
+    ]
   },
   "pricing": {
     "title": "Prices",
@@ -75,9 +86,10 @@
     "courses": "Classes",
     "pricing": "Prices",
     "spot": "Spot",
-    "contact": "Contact"
+    "contact": "Contact",
+    "surfReport": "Surf report"
   },
-   "days": {
+  "days": {
     "monday": "Monday",
     "tuesday": "Tuesday",
     "wednesday": "Wednesday",

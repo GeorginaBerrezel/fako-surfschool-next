@@ -45,7 +45,18 @@
   },
   "spot": {
     "title": "Lieu",
-    "text": "Le surf se pratique sur la plage de VENSAC. Celle-ci se situe à 2km au nord de MONTALIVET les BAINS, commune de VENDAYS, en Gironde. La plage de VENSAC n’est qu’à une vingtaine de kilomètres au sud de SOULAC S/MER par la route D102 et à 1H30 à l’ouest de BORDEAUX. Elle est facile d’accès en voiture, à pied ou bien à vélo par les nombreuses pistes cyclables venant de MONTALIVET, VENSAC et GRAYAN et L’HÔPITAL."
+    "text": "Le surf se pratique sur la plage de VENSAC. Celle-ci se situe à 2km au nord de MONTALIVET les BAINS, commune de VENDAYS, en Gironde. La plage de VENSAC n’est qu’à une vingtaine de kilomètres au sud de SOULAC S/MER par la route D102 et à 1H30 à l’ouest de BORDEAUX. Elle est facile d’accès en voiture, à pied ou bien à vélo par les nombreuses pistes cyclables venant de MONTALIVET, VENSAC et GRAYAN et L’HÔPITAL.",
+    "surfReportLabel": "Voir le surf report",
+    "surfReportHint": "Ouvre le surf report dans un nouvel onglet."
+  },
+  "gallery": {
+    "title": "Photos",
+    "subtitle": "Quelques images pour voir l’ambiance et le type de cours.",
+    "items": [
+      { "alt": "Cours de surf — brief sur la plage", "caption": "Brief & sécurité" },
+      { "alt": "Cours de surf — mise à l’eau", "caption": "Mise à l’eau" },
+      { "alt": "Cours de surf — session dans les vagues", "caption": "Session" }
+    ]
   },
   "pricing": {
     "title": "Tarifs",
@@ -75,7 +86,8 @@
     "courses": "Cours",
     "pricing": "Tarifs",
     "spot": "Spot",
-    "contact": "Contact"
+    "contact": "Contact",
+    "surfReport": "Surf report"
   },
   "days": {
     "monday": "Lundi",
@@ -109,5 +121,4 @@
     "email": "Email",
     "formNote": "Le formulaire sera réintégré ensuite si nécessaire."
   }
-
 }

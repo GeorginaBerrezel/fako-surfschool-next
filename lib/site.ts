@@ -4,10 +4,6 @@ export const site = {
   telephone: "+33600000000",
   email: "contact@fako-surfschool.fr",
 
-  courses: "Cours de surf tous niveaux, adultes et enfants, matériel inclus.",
-  about:
-    "FAKO Surf School est une école de surf mobile proposant des cours personnalisés sur les meilleurs spots.",
-
   address: {
     streetAddress: "Côte landaise – déplacements selon conditions",
     postalCode: "33590",
@@ -24,5 +20,10 @@ export const site = {
     }
   ],
 
-  googleMapsEmbed: "https://www.google.com/maps?q=Hossegor&output=embed"
+  // Maps
+  googleMapsEmbed: "https://www.google.com/maps?q=Hossegor&output=embed",
+  googleMapsLink: "https://www.google.com/maps",
+
+  // Surf report (à remplacer par l’URL exacte que tu veux)
+  surfReportUrl: "https://www.surf-report.com/"
 } as const;
