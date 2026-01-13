@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "next": "latest",
+    "next-intl": "^4.7.0",
     "nodemailer": "^7.0.10",
     "react": "latest",
     "react-dom": "latest"
