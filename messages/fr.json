@@ -77,6 +77,15 @@
     "spot": "Spot",
     "contact": "Contact"
   },
+  "days": {
+    "monday": "Lundi",
+    "tuesday": "Mardi",
+    "wednesday": "Mercredi",
+    "thursday": "Jeudi",
+    "friday": "Vendredi",
+    "saturday": "Samedi",
+    "sunday": "Dimanche"
+  },
   "footer": {
     "addressTitle": "Adresse",
     "directions": "Itinéraire",
