@@ -2,7 +2,10 @@ import Link from 'next/link';
 import {getTranslations} from 'next-intl/server';
 import {site} from '@/lib/site';
 
-type OpeningRange = {opens: string; closes: string;};
+
+type OpeningRange = { opens: string; closes: string };
+type OpeningDay = { days: string[]; ranges: OpeningRange[] };
+
 
 function isClosed(ranges: OpeningRange[]): boolean {
   return !ranges || ranges.length === 0;
@@ -55,7 +58,7 @@ export default async function Footer({locale}: {locale: 'fr' | 'en'}) {
           <section aria-labelledby="hours">
             <h2 id="hours">{t('hoursTitle')}</h2>
             <ul className="hours-list" aria-describedby="hours-note">
-              {(site.openingHours ?? []).map((d, idx) => (
+              {((site.openingHours ?? []) as unknown as OpeningDay[]).map((d, idx) => (
                 <li key={idx} className="hours-row">
                   <span className="hours-day">{t('hoursDefaultLabel', {index: idx + 1})}</span>
                   {isClosed(d.ranges) ? (
