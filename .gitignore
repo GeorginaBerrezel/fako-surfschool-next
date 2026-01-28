@@ -27,3 +27,7 @@ node_modules/
 
 # env
 .env*
+
+# local audit + env
+*.zip
+.env.local
