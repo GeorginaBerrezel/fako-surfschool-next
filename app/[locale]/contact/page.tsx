@@ -11,9 +11,7 @@ export default async function ContactPage({ params }: { params: { locale: "fr" |
   const t = await getTranslations({ locale: params.locale, namespace: "contact" });
 
   const waHref = `https://wa.me/${toWaNumber(site.telephone)}?text=${encodeURIComponent(
-    params.locale === "en"
-      ? "Hello, I would like some information."
-      : "Bonjour, je souhaiterais des informations."
+    t("whatsappPrefill")
   )}`;
 
   return (
