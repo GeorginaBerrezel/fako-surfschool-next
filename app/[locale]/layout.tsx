@@ -1,60 +1,76 @@
-import type {Metadata} from 'next';
-import {NextIntlClientProvider} from 'next-intl';
-import {getMessages, getTranslations} from 'next-intl/server';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import type { Metadata } from "next";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages, getTranslations } from "next-intl/server";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { routing } from "@/i18n/routing";
+import { notFound } from "next/navigation";
 
-type Locale = 'fr' | 'en';
+function siteUrl() {
+  const url = process.env.NEXT_PUBLIC_SITE_URL;
+  if (!url) throw new Error("NEXT_PUBLIC_SITE_URL is required");
+  return url.replace(/\/+$/, "");
+}
 
 export async function generateMetadata({
-  params
+  params,
 }: {
-  params: Promise<{locale: Locale}>;
+  params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-  const {locale} = await params;
+  const { locale } = await params;
 
-  const t = await getTranslations({locale});
-  const title = t('seo.title');
-  const description = t('seo.description');
+  if (!routing.locales.includes(locale as any)) notFound();
+
+  const t = await getTranslations({ locale });
+  const title = t("seo.title");
+  const description = t("seo.description");
+
+  const base = new URL(siteUrl());
+  const canonical = new URL(`/${locale}`, base).toString();
 
   return {
+    metadataBase: base,
     title,
     description,
     alternates: {
+      canonical,
       languages: {
-        fr: '/fr',
-        en: '/en'
-      }
+        fr: new URL("/fr", base).toString(),
+        en: new URL("/en", base).toString(),
+      },
     },
     openGraph: {
       title,
       description,
-      locale,
-      type: 'website'
+      type: "website",
+      url: canonical,
     },
     twitter: {
-      card: 'summary_large_image',
+      card: "summary_large_image",
       title,
-      description
-    }
+      description,
+    },
   };
 }
 
 export default async function LocaleLayout({
   children,
-  params
+  params,
 }: {
   children: React.ReactNode;
-  params: Promise<{locale: Locale}>;
+  params: Promise<{ locale: string }>;
 }) {
-  const {locale} = await params;
-  const messages = await getMessages({locale});
+  const { locale } = await params;
+
+  if (!routing.locales.includes(locale as any)) notFound();
+
+  const messages = await getMessages({ locale });
 
   return (
-    <NextIntlClientProvider messages={messages}>
-      <Header locale={locale} />
+    <NextIntlClientProvider messages={messages} locale={locale}>
+      <Header locale={locale as any} />
       <main id="main">{children}</main>
-      <Footer locale={locale} />
+      <Footer locale={locale as any} />
     </NextIntlClientProvider>
   );
 }
