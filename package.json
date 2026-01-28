@@ -10,7 +10,7 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
-    "next": "16.0.1",
+    "next": "16.0.10",
     "next-intl": "^4.7.0",
     "nodemailer": "^7.0.10",
     "react": "latest",
