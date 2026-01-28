@@ -3,7 +3,7 @@ export const site = {
   tagline: "École de surf mobile – Landes & Pays basque",
 
   // numéro de test (format E.164)
-  telephone: "+33616718887",
+  telephone: "+33646010802",
 
   // Pas d’email affiché sur le site (on garde la clé pour ne pas casser les imports)
   email: "",
